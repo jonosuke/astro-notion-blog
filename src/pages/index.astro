@@ -25,6 +25,8 @@ const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
   getAllTags(),
   getNumberOfPages(),
 ])
+const vite_hoge = import.meta.env.VITE_HOGE;
+const hoge = import.meta.env.HOGE;
 ---
 
 <Layout>
@@ -47,6 +49,8 @@ const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
     }
 
     <footer>
+<h3>{hoge}</h3>
+<h3>{vite_hoge}</h3>
       <Pagination currentPage={1} numberOfPages={numberOfPages} />
     </footer>
   </div>
